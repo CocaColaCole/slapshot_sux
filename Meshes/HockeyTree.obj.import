@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/HockeyTree.obj-5466f97f4a480ac561005f9f275072dd.mesh"
+
+[deps]
+
+files=[ "res://.import/HockeyTree.obj-5466f97f4a480ac561005f9f275072dd.mesh" ]
+
+source_file="res://Meshes/HockeyTree.obj"
+dest_files=[ "res://.import/HockeyTree.obj-5466f97f4a480ac561005f9f275072dd.mesh", "res://.import/HockeyTree.obj-5466f97f4a480ac561005f9f275072dd.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
