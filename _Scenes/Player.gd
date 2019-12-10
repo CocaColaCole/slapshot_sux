@@ -20,5 +20,5 @@ func _process(delta):
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		print(event.as_text())
 		rotate_object_local(Vector3.UP, event.relative[0] * -1 * turn_speed)
+		$Camera.rotate_x(event.relative[1] * -1 *  turn_speed) 
