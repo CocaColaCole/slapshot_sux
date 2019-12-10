@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://_Scenes/HockyRink.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_Scenes/HockeyTree.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Spatial"]
 
@@ -10,3 +11,26 @@
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.257063, 0 )
 speed = 10.0
+
+[node name="Trees" type="Node" parent="."]
+
+[node name="Tree" parent="Trees" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.08946, 0, 13.3995 )
+
+[node name="Tree2" parent="Trees" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.9121, -9.53674e-007, 15.7058 )
+
+[node name="Tree3" parent="Trees" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1956, -0.0299896, -12.7506 )
+
+[node name="Tree4" parent="Trees" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.76873, -9.53674e-007, -15.4647 )
+
+[node name="Tree5" parent="Trees" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8468, -9.53674e-007, 15.9292 )
+
+[node name="Tree6" parent="Trees" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6361, 0.0275869, 14.6563 )
+
+[node name="Tree7" parent="Trees" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8133, 0, -6.57659 )
