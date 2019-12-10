@@ -9,14 +9,13 @@ var velocity = Vector3.ZERO
 func _physics_process(delta):
 	var deltaVelocity = Vector3.ZERO
 	if Input.is_action_pressed("ui_up"):
-		deltaVelocity += Vector3.FORWARD
+		deltaVelocity -= transform.basis.z
 	if Input.is_action_pressed("ui_down"):
-		deltaVelocity -= Vector3.FORWARD
+		deltaVelocity += transform.basis.z
 	if Input.is_action_pressed("ui_left"):
-		deltaVelocity += Vector3.LEFT
+		deltaVelocity -= transform.basis.x
 	if Input.is_action_pressed("ui_right"):
-		deltaVelocity += Vector3.RIGHT
-	deltaVelocity = deltaVelocity.rotated(Vector3.UP, rotation.y)
+		deltaVelocity += transform.basis.x
 	
 	var dragCoeff = 0.01
 	var fricCoeff = 0.05
