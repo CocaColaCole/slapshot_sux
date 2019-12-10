@@ -3,9 +3,6 @@ extends Spatial
 export var speed = 1.0
 export var turn_speed = 0.1
 
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 func _process(delta):
 	var velocity = Vector3.ZERO
 	if Input.is_action_pressed("ui_up"):
