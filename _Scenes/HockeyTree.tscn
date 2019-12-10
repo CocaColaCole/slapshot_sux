@@ -5,7 +5,7 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17617, 0.133015, -0.140328 )
+transform = Transform( 0.999998, -0.00195525, 0.000985153, 0.00195529, 0.999998, -4.03513e-005, -0.000985073, 4.22667e-005, 1, -0.000458593, 0.164622, -0.138781 )
 mesh = ExtResource( 1 )
 material/0 = null
 material/1 = null
