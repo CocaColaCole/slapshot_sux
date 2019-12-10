@@ -1,19 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Meshes/HockeyPuck.obj" type="ArrayMesh" id=1]
 
-[sub_resource type="CylinderShape" id=1]
-radius = 0.0353053
-height = 0.0237778
+[sub_resource type="PhysicsMaterial" id=1]
 
-[node name="Spatial" type="Spatial"]
+[sub_resource type="CylinderShape" id=2]
+radius = 0.109894
+height = 0.09618
+
+[node name="Puck" type="RigidBody"]
+mass = 0.14898
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00898951, 0.0458484, 0.00290667 )
+shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
-
-[node name="RigidBody" type="RigidBody" parent="."]
-
-[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000713602, 0.0173983, -0.00338113 )
-shape = SubResource( 1 )

@@ -3,10 +3,9 @@
 [sub_resource type="PlaneMesh" id=1]
 
 [sub_resource type="BoxShape" id=2]
-extents = Vector3( 10.3633, 0.0083215, 10.4739 )
+extents = Vector3( 10.3633, 0.474024, 10.4739 )
 
 [node name="HockyRink" type="Spatial"]
-editor/display_folded = true
 
 [node name="Mesh" type="MeshInstance" parent="."]
 transform = Transform( 26.2124, 0, 0, 0, 1, 0, 0, 0, 26.2124, 0, 0, 0 )
@@ -14,8 +13,7 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-transform = Transform( 2.5027, 0, 0, 0, 1, 0, 0, 0, 2.5027, 0, 0, 0 )
+transform = Transform( 2.5027, 0, 0, 0, 1, 0, 0, 0, 2.5027, 0.00165629, -0.480359, 0.000573725 )
 shape = SubResource( 2 )
