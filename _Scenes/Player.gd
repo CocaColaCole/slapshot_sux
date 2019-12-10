@@ -5,18 +5,44 @@ export var turn_speed = 0.1
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+var velocity = Vector3.ZERO
 
 func _process(delta):
-	var velocity = Vector3.ZERO
+	var deltaVelocity = Vector3.ZERO
 	if Input.is_action_pressed("ui_up"):
-		velocity += Vector3.FORWARD
+		deltaVelocity += Vector3.FORWARD
 	if Input.is_action_pressed("ui_down"):
-		velocity -= Vector3.FORWARD
+		deltaVelocity -= Vector3.FORWARD
 	if Input.is_action_pressed("ui_left"):
-		velocity += Vector3.LEFT
+		deltaVelocity += Vector3.LEFT
 	if Input.is_action_pressed("ui_right"):
-		velocity += Vector3.RIGHT
+		deltaVelocity += Vector3.RIGHT
+	var dragCoeff = 0.01
+	var fricCoeff = 0.05
+	var drag = velocity.length_squared() * dragCoeff
+	var magnitude = velocity.length()
+	if velocity.length() == 0:
+		magnitude = 0.00001
+	var dragRatio = drag/magnitude
+	
+	if velocity.z < 0:
+		velocity.z += fricCoeff * delta
+	elif velocity.z > 0:
+		velocity.z -= fricCoeff * delta
+		
+	if velocity.x < 0:
+		velocity.x += fricCoeff * delta
+	elif velocity.x > 0:
+		velocity.x -= fricCoeff * delta
+	
+	velocity = velocity * (1-dragRatio)
+	velocity += deltaVelocity * delta
 	translate_object_local(velocity * delta * speed)
+	#print("drag =" + str(drag))
+	#print("magnitude=" + str(magnitude))
+	#print("dragRatio=" + str(dragRatio))
+	print("velocity=" + str(velocity))
 
 func _input(event):
 	if event is InputEventMouseMotion:

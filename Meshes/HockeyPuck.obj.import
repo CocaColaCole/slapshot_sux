@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/HockeyPuck.obj-f1f82da3d33302bc2c0209bf08602887.mesh"
+
+[deps]
+
+files=[ "res://.import/HockeyPuck.obj-f1f82da3d33302bc2c0209bf08602887.mesh" ]
+
+source_file="res://Meshes/HockeyPuck.obj"
+dest_files=[ "res://.import/HockeyPuck.obj-f1f82da3d33302bc2c0209bf08602887.mesh", "res://.import/HockeyPuck.obj-f1f82da3d33302bc2c0209bf08602887.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
