@@ -2,9 +2,8 @@
 
 [ext_resource path="res://Meshes/HockeyStick.obj" type="ArrayMesh" id=1]
 
-
-
 [node name="hockeyStick" type="Spatial"]
+transform = Transform( 0.00506204, 0, 0.999987, 0, 1, 0, -0.999987, 0, 0.00506204, 0, 0, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = ExtResource( 1 )

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://_Scenes/Player.gd" type="Script" id=1]
+[ext_resource path="res://_Scenes/HockeyStick.tscn" type="PackedScene" id=2]
+
+[node name="Player" type="Spatial"]
+script = ExtResource( 1 )
+turn_speed = 0.001
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.16 )
+
+[node name="HockeyStick" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.00506204, 0, 0.999987, 0, 1, 0, -0.999987, 0, 0.00506204, 0.0507649, 0, 0.000256977 )
