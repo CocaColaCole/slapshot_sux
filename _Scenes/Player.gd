@@ -39,10 +39,6 @@ func _process(delta):
 	velocity = velocity * (1-dragRatio)
 	velocity += deltaVelocity * delta
 	translate_object_local(velocity * delta * speed)
-	#print("drag =" + str(drag))
-	#print("magnitude=" + str(magnitude))
-	#print("dragRatio=" + str(dragRatio))
-	print("velocity=" + str(velocity))
 
 func _input(event):
 	if event is InputEventMouseMotion:
