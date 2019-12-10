@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://_Scenes/hockeyStick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_Scenes/HockyRink.tscn" type="PackedScene" id=2]
 
-[node name="hockeyRink" type="Spatial"]
+[node name="World" type="Spatial"]
 
 [node name="hockeyStick" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0379023, -0.0155496, 0.00443292 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0379023, 0.125748, 0.00443292 )
+
+[node name="HockyRink" parent="." instance=ExtResource( 2 )]
