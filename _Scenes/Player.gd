@@ -16,6 +16,7 @@ func _process(delta):
 		deltaVelocity += Vector3.LEFT
 	if Input.is_action_pressed("ui_right"):
 		deltaVelocity += Vector3.RIGHT
+	
 	var dragCoeff = 0.01
 	var fricCoeff = 0.05
 	var drag = velocity.length_squared() * dragCoeff
