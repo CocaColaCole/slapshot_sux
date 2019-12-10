@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/HockeyPlayer.obj-254f71e3f5c62fef0e319be1598f49ff.mesh"
+
+[deps]
+
+files=[ "res://.import/HockeyPlayer.obj-254f71e3f5c62fef0e319be1598f49ff.mesh" ]
+
+source_file="res://Meshes/HockeyPlayer.obj"
+dest_files=[ "res://.import/HockeyPlayer.obj-254f71e3f5c62fef0e319be1598f49ff.mesh", "res://.import/HockeyPlayer.obj-254f71e3f5c62fef0e319be1598f49ff.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

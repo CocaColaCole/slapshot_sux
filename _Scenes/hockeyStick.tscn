@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://physical_assets/hockeyStick.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Meshes/HockeyStick.obj" type="ArrayMesh" id=1]
+
+
 
 [node name="hockeyStick" type="Spatial"]
 
