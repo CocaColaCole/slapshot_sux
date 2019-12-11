@@ -13,6 +13,7 @@ mesh = SubResource( 1 )
 material/0 = null
 
 [node name="StaticBody" type="StaticBody" parent="."]
+collision_mask = 7
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 2.5027, 0, 0, 0, 1, 0, 0, 0, 2.5027, 0.00165629, -0.480359, 0.000573725 )

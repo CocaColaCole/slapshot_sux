@@ -50,9 +50,11 @@ ui_down={
  ]
 }
 
-[physics]
+[layer_names]
 
-3d/physics_engine="Bullet"
+3d_physics/layer_1="World"
+3d_physics/layer_2="Puck"
+3d_physics/layer_3="Stick"
 
 [rendering]
 

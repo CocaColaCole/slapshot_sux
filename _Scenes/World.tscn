@@ -12,7 +12,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00194001, 0, -0.000219107 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0273556, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217816, 0 )
 speed = 10.0
 
 [node name="Trees" type="Node" parent="."]
@@ -79,7 +79,7 @@ margin_bottom = 358.0
 placeholder_text = "Port"
 
 [node name="Puck" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.273013, 0.0300599, -1.22275 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.273013, 0.762466, -1.22275 )
 mass = 0.0479592
 [connection signal="button_down" from="GameController/Canvas/SinglePlayer" to="GameController" method="_on_SinglePlayer_button_down"]
 [connection signal="button_down" from="GameController/Canvas/Join Game" to="GameController" method="_on_Join_Game_button_down"]

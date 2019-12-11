@@ -3,20 +3,21 @@
 [ext_resource path="res://Meshes/HockeyPuck.obj" type="ArrayMesh" id=1]
 
 [sub_resource type="PhysicsMaterial" id=1]
+friction = 0.09
 
 [sub_resource type="CylinderShape" id=2]
-radius = 0.109894
-height = 0.09618
+radius = 0.119081
+height = 0.11829
 
 [node name="Puck" type="RigidBody"]
-mass = 0.14898
+collision_layer = 2
+collision_mask = 5
 physics_material_override = SubResource( 1 )
 
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00898951, 0.0458484, 0.00290667 )
-shape = SubResource( 2 )
-
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+transform = Transform( 3.70148, 0.0141346, 0.00679014, -0.0141148, 3.70147, -0.0107854, -0.00683125, 0.0107594, 3.70149, 0, -0.0587898, 0 )
 mesh = ExtResource( 1 )
 material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
