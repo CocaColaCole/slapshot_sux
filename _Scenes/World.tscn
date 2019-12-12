@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://_Scenes/HockyRink.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_Scenes/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://_Scenes/HockeyPuck.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Audio/slaps.wav" type="AudioStream" id=6]
 [ext_resource path="res://_Scenes/MusicBox.gd" type="Script" id=7]
+[ext_resource path="res://_Scenes/HockeyNet.tscn" type="PackedScene" id=8]
 
 [node name="World" type="Spatial"]
 
@@ -88,6 +89,12 @@ mass = 0.0479592
 stream = ExtResource( 6 )
 autoplay = true
 script = ExtResource( 7 )
+
+[node name="HockeyNet" parent="." instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.793308, 0.0632935, -13.0113 )
+
+[node name="HockeyNet2" parent="." instance=ExtResource( 8 )]
+transform = Transform( -0.999894, 0, 0.0145603, 0, 1, 0, -0.0145603, 0, -0.999894, 0.306466, 0.0632935, 11.7354 )
 [connection signal="button_down" from="GameController/Canvas/SinglePlayer" to="GameController" method="_on_SinglePlayer_button_down"]
 [connection signal="button_down" from="GameController/Canvas/Join Game" to="GameController" method="_on_Join_Game_button_down"]
 [connection signal="button_down" from="GameController/Canvas/Host Game" to="GameController" method="_on_Host_Game_button_down"]

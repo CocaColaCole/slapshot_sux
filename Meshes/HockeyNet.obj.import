@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/HockeyNet.obj-4fdd3efffea754e4504e8f4ee869bc11.mesh"
+
+[deps]
+
+files=[ "res://.import/HockeyNet.obj-4fdd3efffea754e4504e8f4ee869bc11.mesh" ]
+
+source_file="res://Meshes/HockeyNet.obj"
+dest_files=[ "res://.import/HockeyNet.obj-4fdd3efffea754e4504e8f4ee869bc11.mesh", "res://.import/HockeyNet.obj-4fdd3efffea754e4504e8f4ee869bc11.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
