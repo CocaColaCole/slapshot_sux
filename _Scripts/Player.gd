@@ -13,7 +13,6 @@ var puck_look = false
 
 func _ready():
 	camera_default = $Camera.transform
-	puck = get_tree().current_scene.find_node("Puck")
 
 func _process(delta):
 	if puck_look:
@@ -76,3 +75,6 @@ func _input(event):
 		else:
 			rotate_object_local(Vector3.UP, event.relative[0] * -1 * turn_speed)
 			$Camera.rotate_x(event.relative[1] * -1 *  turn_speed)
+
+func _on_Puck_Spawner_new_puck(new_puck):
+	puck = new_puck
