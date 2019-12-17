@@ -20,7 +20,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.217816, 3.40709 )
 speed = 10.0
 
 [node name="Trees" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Tree" parent="Trees" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.08946, 0, 13.3995 )
@@ -44,7 +43,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6361, 0.0275869, 14.6563 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8133, 0, -6.57659 )
 
 [node name="GameController" type="Node" parent="."]
-editor/display_folded = true
 script = ExtResource( 4 )
 
 [node name="Canvas" type="Node" parent="GameController"]
@@ -102,4 +100,5 @@ puck_scene = ExtResource( 9 )
 [connection signal="button_down" from="GameController/Canvas/SinglePlayer" to="GameController" method="_on_SinglePlayer_button_down"]
 [connection signal="button_down" from="GameController/Canvas/Join Game" to="GameController" method="_on_Join_Game_button_down"]
 [connection signal="button_down" from="GameController/Canvas/Host Game" to="GameController" method="_on_Host_Game_button_down"]
+[connection signal="entered_goal" from="HockeyNet" to="GameController" method="_on_HockeyNet_entered_goal"]
 [connection signal="new_puck" from="Puck Spawner" to="Player" method="_on_Puck_Spawner_new_puck"]
