@@ -3,7 +3,7 @@
 [ext_resource path="res://_Scenes/HockyRink.tscn" type="PackedScene" id=1]
 [ext_resource path="res://_Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://_Scenes/HockeyTree.tscn" type="PackedScene" id=3]
-[ext_resource path="res://_Scripts/GameController.gd" type="Script" id=4]
+[ext_resource path="res://_Scenes/GameController.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Audio/slaps.wav" type="AudioStream" id=5]
 [ext_resource path="res://_Scripts/MusicBox.gd" type="Script" id=6]
 [ext_resource path="res://_Scenes/HockeyNet.tscn" type="PackedScene" id=7]
@@ -42,45 +42,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6361, 0.0275869, 14.6563 )
 [node name="Tree7" parent="Trees" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8133, 0, -6.57659 )
 
-[node name="GameController" type="Node" parent="."]
-script = ExtResource( 4 )
-
-[node name="Canvas" type="Node" parent="GameController"]
-
-[node name="SinglePlayer" type="Button" parent="GameController/Canvas"]
-margin_left = 471.0
-margin_top = 264.0
-margin_right = 570.0
-margin_bottom = 284.0
-text = "SinglePlayer"
-
-[node name="Join Game" type="Button" parent="GameController/Canvas"]
-margin_left = 525.0
-margin_top = 302.0
-margin_right = 613.0
-margin_bottom = 322.0
-text = "Join"
-
-[node name="Host Game" type="Button" parent="GameController/Canvas"]
-margin_left = 524.0
-margin_top = 336.0
-margin_right = 612.0
-margin_bottom = 356.0
-text = "Host Game"
-
-[node name="IPAddress" type="LineEdit" parent="GameController/Canvas"]
-margin_left = 364.0
-margin_top = 298.0
-margin_right = 510.0
-margin_bottom = 322.0
-placeholder_text = "IP Address"
-
-[node name="LineEdit" type="LineEdit" parent="GameController/Canvas"]
-margin_left = 452.0
-margin_top = 334.0
-margin_right = 510.0
-margin_bottom = 358.0
-placeholder_text = "Port"
+[node name="GameController" parent="." instance=ExtResource( 4 )]
 
 [node name="MusicBox" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
@@ -89,16 +51,16 @@ script = ExtResource( 6 )
 
 [node name="HockeyNet" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.793308, 0.0632935, -13.0113 )
+team = 1
 
 [node name="HockeyNet2" parent="." instance=ExtResource( 7 )]
 transform = Transform( -0.999894, 0, 0.0145603, 0, 1, 0, -0.0145603, 0, -0.999894, 0.306466, 0.0632935, 11.7354 )
+team = 2
 
 [node name="Puck Spawner" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33688, 0 )
 script = ExtResource( 8 )
 puck_scene = ExtResource( 9 )
-[connection signal="button_down" from="GameController/Canvas/SinglePlayer" to="GameController" method="_on_SinglePlayer_button_down"]
-[connection signal="button_down" from="GameController/Canvas/Join Game" to="GameController" method="_on_Join_Game_button_down"]
-[connection signal="button_down" from="GameController/Canvas/Host Game" to="GameController" method="_on_Host_Game_button_down"]
 [connection signal="entered_goal" from="HockeyNet" to="GameController" method="_on_HockeyNet_entered_goal"]
+[connection signal="entered_goal" from="HockeyNet2" to="GameController" method="_on_HockeyNet_entered_goal"]
 [connection signal="new_puck" from="Puck Spawner" to="Player" method="_on_Puck_Spawner_new_puck"]
